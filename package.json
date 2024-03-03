@@ -1,15 +1,19 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/freevad-frontend/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/freevad-frontend/frontend-project-44/actions)",
+  "description": "Игры разума",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vadim Semenov",
   "license": "ISC",
   "dependencies": {
-    "make": "^0.8.1"
-  }
+    "readline-sync": "^1.4.10"
+  },
+
+  "bin": {
+  "brain-games": "bin/brain-games.js"
+}
 }

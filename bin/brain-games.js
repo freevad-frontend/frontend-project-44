@@ -2,4 +2,8 @@
 console.log('Welcome to the Brain Games!');
 
 import greeting from "../src/cli.js";
-console.log('Hello, ' + greeting() + '!');
+const greetingUser = greeting('May I have your name?')
+console.log('Hello, ' + greetingUser + '!');
+
+import even from "./brain-even.js";
+const evenUser = even(greetingUser);

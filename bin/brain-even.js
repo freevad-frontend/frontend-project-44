@@ -11,4 +11,4 @@ console.log('Welcome to the Brain Games!');
 const greetingUser = greeting('May I have your name?');
 console.log(`Hello, ${greetingUser}!`);
 
-const evenThisUser = even(greetingUser);// собственно вызов игры с именем пользователя
+even(greetingUser);// вызов игры с именем пользователя

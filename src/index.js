@@ -9,6 +9,8 @@ import randomAnswerEven from './games/brain-even.js';
 
 import randomAnswerGcd from './games/brain-gcd.js';
 
+import randomAnswerProgression from './games/brain-progression.js';
+
 // выбираем из какого файла брать функцию с генерацией заданий и ответов
 // выбираем в зависимости от игры
 const randomAnswer = (gameName) => {
@@ -16,6 +18,7 @@ const randomAnswer = (gameName) => {
     case 'Calc': return randomAnswerCalc();
     case 'Even': return randomAnswerEven();
     case 'Gcd': return randomAnswerGcd();
+    case 'Progression': return randomAnswerProgression();
     default: return ['Error', 'Error'];
   }
 };

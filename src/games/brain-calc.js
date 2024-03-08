@@ -26,7 +26,7 @@ const randomAnswerCalc = () => {
   // генерируем второе случайное число
   const mathSymbol = randomInt(0, mathSymbols.length - 1);
   // генерируем  случайное число индекс операции от 0 до последнего индекса
-  const answerText = `${randomInt1}${mathSymbols[mathSymbol]}${randomInt2}`;
+  const answerText = `${randomInt1} ${mathSymbols[mathSymbol]} ${randomInt2}`;
   const resultAnswer = result(randomInt1, randomInt2, mathSymbol).toString();
   return [answerText, resultAnswer];
 };

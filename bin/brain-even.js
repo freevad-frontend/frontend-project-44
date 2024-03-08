@@ -2,13 +2,7 @@
 
 // Игра: "Проверка на чётность"
 
-import greeting from '../src/cli.js';
+import eachGame from '../src/index.js';
 
-import even from '../src/games/brain-even.js';
-
-console.log('Welcome to the Brain Games!');
-
-const greetingUser = greeting('May I have your name?');
-console.log(`Hello, ${greetingUser}!`);
-
-even(greetingUser);// вызов игры с именем пользователя
+const taskCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
+eachGame('Even', taskCondition);

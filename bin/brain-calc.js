@@ -2,13 +2,7 @@
 
 // Игра: "Калькулятор"
 
-import greeting from '../src/cli.js';
+import eachGame from '../src/index.js';
 
-import calculator from '../src/games/brain-calc.js';
-
-console.log('Welcome to the Brain Games!');
-
-const greetingUser = greeting('May I have your name?');
-console.log(`Hello, ${greetingUser}!`);
-
-calculator(greetingUser);// вызов игры с именем пользователя
+const taskCondition = 'What is the result of the expression?';
+eachGame('Calc', taskCondition);

@@ -1,45 +1,33 @@
-// функция Игры Калькулятор
-import greeting from '../cli.js';
+// генерация задания и ответа Игры Калькулятор
 
-const calculator = (userName) => {
-  console.log('What is the result of the expression?'); // пишем строчку условия игры
-  const min = 1; // задаем минимальное число
-  const max = 20; // задаем максимальное число
-  const mathSymbols = ['+', '-', '*']; // задаем массив операций
+import randomInt from './randomGenerator.js';
 
-  for (let i = 1; i <= 3; i += 1) {
-    const randomInt1 = Math.floor(Math.random() * (max - min + 1)) + min;
-    // генерируем первое случайное число
-    const randomInt2 = Math.floor(Math.random() * (max - min + 1)) + min;
-    // генерируем второе случайное число
-    const mathSymbol = Math.floor(Math.random() * (mathSymbols.length));
-    // генерируем  случайное число индекс операции от 0 до 2
+// задаем ограничения чисел и мат операции
+const min = 1; // задаем минимальное число
+const max = 20; // задаем максимальное число
+const mathSymbols = ['+', '-', '*']; // задаем массив операций
 
-    let result;
-    switch (mathSymbol) {
-      case 0: result = randomInt1 + randomInt2;
-        break;
-      case 1: result = randomInt1 - randomInt2;
-        break;
-      case 2: result = randomInt1 * randomInt2;
-        break;
-      default: result = randomInt1 + randomInt2;
-    }
-
-    console.log(`Question: ${randomInt1}${mathSymbols[mathSymbol]}${randomInt2}`);
-    // пишем число пользователю
-    const answer = greeting('Your answer:'); // спрашиваем его ответ
-
-    if (parseInt(answer, 10) === result) {
-      console.log('Correct!');
-    } // если ответ верный - пишем что правильно и уходим на новый цикл
-
-    if (parseInt(answer, 10) !== result) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    } // если ответ неверный - пишем что неверно, прерываем цикл и всю программу
+// вычисляем правильный ответ (результат)
+const result = (randomInt1, randomInt2, mathSymbol) => {
+  switch (mathSymbol) {
+    case 0: return randomInt1 + randomInt2;
+    case 1: return randomInt1 - randomInt2;
+    case 2: return randomInt1 * randomInt2;
+    default: return randomInt1 + randomInt2;
   }
-  console.log(`Congratulations, ${userName}!`); // если все разы ответил правильно - хвалим и выходим
 };
-export default calculator;
+
+// функция генерации и возвращения задания и ответа для каждой итерации цикла
+// функция вызывается из index.js
+const randomAnswerCalc = () => {
+  const randomInt1 = randomInt(min, max);
+  // генерируем первое случайное число
+  const randomInt2 = randomInt(min, max);
+  // генерируем второе случайное число
+  const mathSymbol = randomInt(0, mathSymbols.length - 1);
+  // генерируем  случайное число индекс операции от 0 до последнего индекса
+  const answerText = `${randomInt1}${mathSymbols[mathSymbol]}${randomInt2}`;
+  const resultAnswer = result(randomInt1, randomInt2, mathSymbol).toString();
+  return [answerText, resultAnswer];
+};
+export default randomAnswerCalc;

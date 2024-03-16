@@ -20,7 +20,7 @@ export const getRandomAnswerEven = () => {
   const randomInt1 = getRandomInt(minRange, maxRange);
 
   // проверяем на четность и присваиваем слова из вариантов ответа пользователя
-  const correctAnswer = isEven(randomInt1) ? 'no' : 'yes';
+  const correctAnswer = isEven(randomInt1) ? 'yes' : 'no';
 
   const questionText = `${randomInt1}`;
 

@@ -17,26 +17,26 @@ If the answer is correct - the game continues for three consecutive rounds.
 # Installation
 ## for Windows:
 
-	- Install the latest version of Node.js on your system from https://nodejs.org/en/download
-	- Clone the created repository to your computer using command 
-`git clone https://github.com/freevad-frontend/frontend-project-44`
-	- Go to the folder frontend-project-44
-`cd frontend-project-44`
+- Install the latest version of Node.js on your system from https://nodejs.org/en/download
+- Clone the created repository to your computer using command 
+	`git clone https://github.com/freevad-frontend/frontend-project-44`
+- Go to the folder frontend-project-44
+	`cd frontend-project-44`
 
 ## for Ubuntu:
 
-	- Install the latest version of Node.js on your system 
-`node install`
-	- Clone the created repository to your computer using command 
-`git clone https://github.com/freevad-frontend/frontend-project-44`
-	- Go to the folder frontend-project-44
-`cd frontend-project-44`
-	- Install make with the install command running npm ci
-`make install npm ci`
-	- Initialize your npm package inside the root directory of your project using command npm init
-`npm init`
-	- Install the package on your system using npm link. The npm link command may require running with sudo
-`npm link`
+- Install the latest version of Node.js on your system 
+	`node install`
+- Clone the created repository to your computer using command 
+	`git clone https://github.com/freevad-frontend/frontend-project-44`
+- Go to the folder frontend-project-44
+	`cd frontend-project-44`
+- Install make with the install command running npm ci
+	`make install npm ci`
+- Initialize your npm package inside the root directory of your project using command npm init
+	`npm init`
+- Install the package on your system using npm link. The npm link command may require running with sudo
+	`npm link`
 
 
 # Gameplay

@@ -4,18 +4,18 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/aaaf529c3aebf3beddf4/maintainability)](https://codeclimate.com/github/freevad-frontend/frontend-project-44/maintainability)
 
 
-#Brain Games
+# Brain Games
 
 A set of 5 console games.
 You have to answer the question you are asked.
 If the answer is incorrect, the game ends. Any incorrect input is considered an error and is equal to a wrong answer.
 If the answer is correct - the game continues for three consecutive rounds.
 
-#System requirements
+# System requirements
 	Node.js v20.11.1
 
-#Installation
-##for Windows:
+# Installation
+## for Windows:
 
 	- Install the latest version of Node.js on your system from https://nodejs.org/en/download
 	- Clone the created repository to your computer using command 
@@ -23,7 +23,7 @@ If the answer is correct - the game continues for three consecutive rounds.
 	- Go to the folder frontend-project-44
 		`cd frontend-project-44`
 
-##for Ubuntu:
+## for Ubuntu:
 
 	- Install the latest version of Node.js on your system 
 		`node install`
@@ -39,11 +39,11 @@ If the answer is correct - the game continues for three consecutive rounds.
 		`npm link`
 
 
-#Gameplay
-##The game "Parity Check"
-###Description
+# Gameplay
+## The game "Parity Check"
+### Description
 The essence of the game is the following: a random number is shown and you should answer yes if the number is even or no if it is odd.
-###Launch
+### Launch
 
 - for Windows:
   `node bin/brain-even.js`
@@ -52,10 +52,10 @@ The essence of the game is the following: a random number is shown and you shoul
 
 [![asciicast](https://asciinema.org/a/645949.svg)](https://asciinema.org/a/645949)
 
-###Calculator game
-###Description
+### Calculator game
+### Description
 The essence of the game is the following: a random mathematical expression is shown, for example 35 + 16, which you need to calculate and write down the correct answer.
-##Launch
+### Launch
 
 - for Windows:
   `node bin/brain-calc.js`
@@ -64,10 +64,10 @@ The essence of the game is the following: a random mathematical expression is sh
 
 [![asciicast](https://asciinema.org/a/645946.svg)](https://asciinema.org/a/645946?t=15)
 
-##The game "Greatest Common Divisor (GND)"
-###Description
+## The game "Greatest Common Divisor (GND)"
+### Description
 The essence of the game is as follows: two random numbers are shown, for example, 25 50. It is necessary to calculate and record the greatest common divisor of these numbers.
-###Launch
+### Launch
 
 - for Windows:
   `node bin/brain-gcd.js`
@@ -76,10 +76,10 @@ The essence of the game is as follows: two random numbers are shown, for example
 
 [![asciicast](https://asciinema.org/a/DFNAWnMdLvuWFZGlTARzFJXGy.svg)](https://asciinema.org/a/DFNAWnMdLvuWFZGlTARzFJXGy)
 
-##The game "Arithmetic Progression"
-###Description
+## The game "Arithmetic Progression"
+### Description
 The essence of the game is as follows: a series of numbers is shown that form an arithmetic progression, replacing any of the numbers with two dots. It is necessary to determine this number.
-###Launch
+### Launch
 
 - for Windows:
   `node bin/brain-progression.js`
@@ -88,10 +88,10 @@ The essence of the game is as follows: a series of numbers is shown that form an
 
 [![asciicast](https://asciinema.org/a/645951.svg)](https://asciinema.org/a/645951)
 
-##The game "Is the number prime?"
-###Description
+## The game "Is the number prime?"
+### Description
 The essence of the game is as follows: a number is shown. It is necessary to determine whether this number is simple or not and enter yes if it is simple and no if it is not.
-###Launch
+### Launch
 
 - for Windows:
   `node bin/brain-prime.js`

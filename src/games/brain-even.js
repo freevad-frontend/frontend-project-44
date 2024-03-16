@@ -1,23 +1,28 @@
 // генерация задания и ответа Игры Проверка на четность
 
-import randomInt from './randomGenerator.js';
+import getRandomInt from './randomGenerator.js';
+
+// пишем условие игры
+export const getTaskConditionEven = () => {
+  const taskCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
+  return taskCondition;
+};
+
+// функция проверки на четность
+const isEven = (number) => number % 2 === 0;
 
 // задаем ограничения числа
-const min = 1; // задаем минимальное число
-const max = 20; // задаем максимальное число
+const minRange = 1;
+const maxRange = 20;
 
 // функция генерации и возвращения задания и ответа для каждой итерации цикла
-// функция вызывается из index.js
-const randomAnswerEven = () => {
-  const randomInt1 = randomInt(min, max);
-  // генерируем случайное число
+export const getRandomAnswerEven = () => {
+  const randomInt1 = getRandomInt(minRange, maxRange);
 
-  const evenRandom = randomInt1 % 2 ? 'no' : 'yes'; // проверяем на четность и присваиваем слова из вариантов ответа пользователя
+  // проверяем на четность и присваиваем слова из вариантов ответа пользователя
+  const correctAnswer = isEven(randomInt1) ? 'no' : 'yes';
 
-  const answerText = `${randomInt1}`; // текст задания
+  const questionText = `${randomInt1}`;
 
-  const resultAnswer = evenRandom; // правильный ответ
-
-  return [answerText, resultAnswer];
+  return [questionText, correctAnswer];
 };
-export default randomAnswerEven;

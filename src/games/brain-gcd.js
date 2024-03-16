@@ -1,29 +1,36 @@
 // генерация задания и ответа Игры НОД
 
-import randomInt from './randomGenerator.js';
+import getRandomInt from './randomGenerator.js';
 
-// задаем ограничения чисел и мат операции
-const min = 1; // задаем минимальное число
-const max = 60; // задаем максимальное число
+// пишем условие игры
+export const getTaskConditionGcd = () => {
+  const taskCondition = 'Find the greatest common divisor of given numbers.';
+  return taskCondition;
+};
+
+// задаем ограничения чисел
+const minRange = 1;
+const maxRange = 60;
 
 // вычисляем правильный ответ (результат)
-const result = (Int1, Int2) => {
-  if (Int2 === 0) {
-    return Int1;
+const getResult = (int1, int2) => {
+  if (int2 === 0) {
+    return int1;
   }
-  return result(Int2, Int1 % Int2);
+  return getResult(int2, int1 % int2);
 };
 
 // функция генерации и возвращения задания и ответа для каждой итерации цикла
-// функция вызывается из index.js
-const randomAnswerGcd = () => {
-  const randomInt1 = randomInt(min, max);
-  // генерируем первое случайное число
-  const randomInt2 = randomInt(min, max);
-  // генерируем второе случайное число
-  const resultThis = result(randomInt1, randomInt2);
-  const answerText = `${randomInt1} ${randomInt2}`;
-  const resultAnswer = resultThis.toString();
-  return [answerText, resultAnswer];
+export const getRandomAnswerGcd = () => {
+  const randomInt1 = getRandomInt(minRange, maxRange);
+
+  const randomInt2 = getRandomInt(minRange, maxRange);
+
+  const resultThis = getResult(randomInt1, randomInt2);
+
+  const questionText = `${randomInt1} ${randomInt2}`;
+
+  const correctAnswer = resultThis.toString();
+
+  return [questionText, correctAnswer];
 };
-export default randomAnswerGcd;

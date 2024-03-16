@@ -1,34 +1,43 @@
 // генерация задания и ответа Игры Простое ли число?
 
-import randomInt from './randomGenerator.js';
+import getRandomInt from './randomGenerator.js';
 
-// задаем ограничения чисел
-const min = 1; // задаем минимальное число
-const max = 60; // задаем максимальное число
+// пишем условие игры
+export const getTaskConditionPrime = () => {
+  const taskCondition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  return taskCondition;
+};
 
-// вычисляем правильный ответ (результат)
-const result = (Int1) => {
-  if (Int1 <= 1) {
-    return 'no';
+// функция проверки на простое число
+const isPrime = (int1) => {
+  if (int1 <= 1) {
+    return false;
   }
-  for (let i = 2; i <= Math.sqrt(Int1); i += 1) {
-    if (Int1 % i === 0) {
-      return 'no';
+  for (let i = 2; i <= Math.sqrt(int1); i += 1) {
+    if (int1 % i === 0) {
+      return false;
     }
   }
-  return 'yes';
+  return true;
+};
+
+// задаем ограничения числа
+const minRange = 1;
+const maxRange = 60;
+
+// вычисляем правильный ответ (результат)
+const getResult = (int1) => {
+  const result = isPrime(int1) ? 'yes' : 'no';
+  return result;
 };
 
 // функция генерации и возвращения задания и ответа для каждой итерации цикла
-// функция вызывается из index.js
-const randomAnswerPrime = () => {
-  const randomInt1 = randomInt(min, max);
-  // генерируем случайное число
+export const getRandomAnswerPrime = () => {
+  const randomInt1 = getRandomInt(minRange, maxRange);
 
-  const resultThis = result(randomInt1);
+  const correctAnswer = getResult(randomInt1);
 
-  const answerText = `${randomInt1}`;
-  const resultAnswer = resultThis;
-  return [answerText, resultAnswer];
+  const questionText = `${randomInt1}`;
+
+  return [questionText, correctAnswer];
 };
-export default randomAnswerPrime;

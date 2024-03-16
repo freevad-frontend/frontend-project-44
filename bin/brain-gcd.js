@@ -2,7 +2,6 @@
 
 // Игра: "НОД"
 
-import eachGame from '../src/index.js';
+import playEachGame from '../src/index.js';
 
-const taskCondition = 'Find the greatest common divisor of given numbers.';
-eachGame('Gcd', taskCondition);
+playEachGame('Gcd');

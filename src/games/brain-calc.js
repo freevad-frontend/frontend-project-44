@@ -34,7 +34,7 @@ export const getRandomAnswerCalc = () => {
   // генерируем индекс мат операции и получаем символ мат операции
   const mathSymbol = mathSymbols[getRandomInt(0, mathSymbols.length - 1)];
 
-  const questionText = `${randomInt1} ${mathSymbols[mathSymbol]} ${randomInt2}`;
+  const questionText = `${randomInt1} ${mathSymbol} ${randomInt2}`;
   const correctAnswer = getResult(randomInt1, randomInt2, mathSymbol).toString();
   return [questionText, correctAnswer];
 };

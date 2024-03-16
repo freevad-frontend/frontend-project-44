@@ -52,7 +52,7 @@ The essence of the game is the following: a random number is shown and you shoul
 
 [![asciicast](https://asciinema.org/a/645949.svg)](https://asciinema.org/a/645949)
 
-### Calculator game
+## The game "Calculator"
 ### Description
 The essence of the game is the following: a random mathematical expression is shown, for example 35 + 16, which you need to calculate and write down the correct answer.
 ### Launch

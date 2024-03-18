@@ -2,6 +2,6 @@
 
 // Игра: "НОД"
 
-import playEachGame from '../src/index.js';
+import runGameBrainGcd from '../src/games/brain-gcd.js';
 
-playEachGame('Gcd');
+runGameBrainGcd();

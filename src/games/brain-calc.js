@@ -1,12 +1,11 @@
 // генерация задания и ответа Игры Калькулятор
 
-import getRandomInt from './randomGenerator.js';
+import getRandomInt from '../randomGenerator.js';
+
+import playEachGame from '../index.js';
 
 // пишем условие игры
-export const getTaskConditionCalc = () => {
-  const taskCondition = 'What is the result of the expression?';
-  return taskCondition;
-};
+const taskCondition = 'What is the result of the expression?';
 
 // задаем ограничения чисел и мат операции
 const minRange = 1;
@@ -38,3 +37,7 @@ export const getRandomAnswerCalc = () => {
   const correctAnswer = getResult(randomInt1, randomInt2, mathSymbol).toString();
   return [questionText, correctAnswer];
 };
+
+const runGameBrainCalc = () => playEachGame(taskCondition, getRandomAnswerCalc);
+
+export default runGameBrainCalc;

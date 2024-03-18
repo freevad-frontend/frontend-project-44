@@ -2,6 +2,6 @@
 
 // Игра: "Калькулятор"
 
-import playEachGame from '../src/index.js';
+import runGameBrainCalc from '../src/games/brain-calc.js';
 
-playEachGame('Calc');
+runGameBrainCalc();

@@ -2,6 +2,6 @@
 
 // Игра: "Арифметическая прогрессия"
 
-import playEachGame from '../src/index.js';
+import runGameBrainProgression from '../src/games/brain-progression.js';
 
-playEachGame('Progression');
+runGameBrainProgression();

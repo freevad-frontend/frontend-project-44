@@ -1,12 +1,11 @@
 // генерация задания и ответа Игры Арифметическая прогрессия
 
-import getRandomInt from './randomGenerator.js';
+import getRandomInt from '../randomGenerator.js';
+
+import playEachGame from '../index.js';
 
 // пишем условие игры
-export const getTaskConditionProgression = () => {
-  const taskCondition = 'What number is missing in the progression?';
-  return taskCondition;
-};
+const taskCondition = 'What number is missing in the progression?';
 
 // задаем ограничение первого числа в ряду
 const minFirstNumber = 1;
@@ -56,3 +55,7 @@ export const getRandomAnswerProgression = () => {
 
   return [questionText, correctAnswer];
 };
+
+const runGameBrainProgression = () => playEachGame(taskCondition, getRandomAnswerProgression);
+
+export default runGameBrainProgression;

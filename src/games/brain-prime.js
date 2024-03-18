@@ -1,12 +1,11 @@
 // генерация задания и ответа Игры Простое ли число?
 
-import getRandomInt from './randomGenerator.js';
+import getRandomInt from '../randomGenerator.js';
+
+import playEachGame from '../index.js';
 
 // пишем условие игры
-export const getTaskConditionPrime = () => {
-  const taskCondition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return taskCondition;
-};
+const taskCondition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // функция проверки на простое число
 const isPrime = (int1) => {
@@ -41,3 +40,7 @@ export const getRandomAnswerPrime = () => {
 
   return [questionText, correctAnswer];
 };
+
+const runGameBrainPrime = () => playEachGame(taskCondition, getRandomAnswerPrime);
+
+export default runGameBrainPrime;

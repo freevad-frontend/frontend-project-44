@@ -2,6 +2,6 @@
 
 // Игра: "Простое ли число?"
 
-import playEachGame from '../src/index.js';
+import runGameBrainPrime from '../src/games/brain-prime.js';
 
-playEachGame('Prime');
+runGameBrainPrime();

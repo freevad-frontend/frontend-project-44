@@ -1,12 +1,11 @@
 // генерация задания и ответа Игры НОД
 
-import getRandomInt from './randomGenerator.js';
+import getRandomInt from '../randomGenerator.js';
+
+import playEachGame from '../index.js';
 
 // пишем условие игры
-export const getTaskConditionGcd = () => {
-  const taskCondition = 'Find the greatest common divisor of given numbers.';
-  return taskCondition;
-};
+const taskCondition = 'Find the greatest common divisor of given numbers.';
 
 // задаем ограничения чисел
 const minRange = 1;
@@ -34,3 +33,7 @@ export const getRandomAnswerGcd = () => {
 
   return [questionText, correctAnswer];
 };
+
+const runGameBrainGcd = () => playEachGame(taskCondition, getRandomAnswerGcd);
+
+export default runGameBrainGcd;

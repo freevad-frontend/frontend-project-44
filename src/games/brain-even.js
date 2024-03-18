@@ -1,12 +1,11 @@
 // генерация задания и ответа Игры Проверка на четность
 
-import getRandomInt from './randomGenerator.js';
+import getRandomInt from '../randomGenerator.js';
+
+import playEachGame from '../index.js';
 
 // пишем условие игры
-export const getTaskConditionEven = () => {
-  const taskCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return taskCondition;
-};
+const taskCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // функция проверки на четность
 const isEven = (number) => number % 2 === 0;
@@ -26,3 +25,7 @@ export const getRandomAnswerEven = () => {
 
   return [questionText, correctAnswer];
 };
+
+const runGameBrainEven = () => playEachGame(taskCondition, getRandomAnswerEven);
+
+export default runGameBrainEven;
